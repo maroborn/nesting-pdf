@@ -12,3 +12,7 @@ python nesting_pdf.py "folder or file.pdf" --width 137 [--gap 0.5] [--copies N] 
 ```
 
 All measurements in cm. Default output is `NESTING_<width>cm.pdf` in the folder of the first PDF.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
