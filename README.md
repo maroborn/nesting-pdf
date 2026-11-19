@@ -1,13 +1,14 @@
 # nesting-pdf
 
-Dispone le pagine di uno o più PDF su un unico foglio largo quanto il rotolo del plotter, consumando meno materiale possibile (le pagine possono essere ruotate di 90°).
+Lays out the pages of one or more PDFs on a single sheet as wide as the plotter roll, using as little material as possible (pages can be rotated by 90°).
 
-- Filetto di margine automatico sui pezzi a sfondo bianco (`--no-segni` per disattivarlo)
-- Bordo vuoto a destra e a sinistra per il taglio del RIP (`--margine`, default 0,5 cm)
-- Esclusione di singole pagine (`--escludi "file.pdf:N"`)
+- Automatic hairline outline on white-background pieces (`--no-outline` to disable)
+- Empty strip on left and right for RIP cropping (`--margin`, default 0.5 cm)
+- Skip individual pages (`--exclude "file.pdf:N"`, repeatable)
 
 ```bash
 pip install pymupdf
-python nesting_pdf.py "cartella o file.pdf" --larghezza 137 [--spazio 0.5] [--copie N] [-o out.pdf]
+python nesting_pdf.py "folder or file.pdf" --width 137 [--gap 0.5] [--copies N] [-o out.pdf]
 ```
-Misure in cm. L'output predefinito è `NESTING_<larghezza>cm.pdf` nella cartella del primo PDF.
+
+All measurements in cm. Default output is `NESTING_<width>cm.pdf` in the folder of the first PDF.
